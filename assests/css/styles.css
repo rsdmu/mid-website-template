@@ -1,0 +1,610 @@
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    font-size: 1.2em; /* Base font size */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0; /* Increased padding for better spacing */
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.logo-container .logo {
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-container .mila-logo {
+    max-height: 80px; /* Adjust as needed */
+    width: auto;
+    height: auto;
+}
+
+/* Navigation */
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ff7f50;
+}
+
+/* Toggle Button */
+.toggle-button {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    /* Hide specific links in mobile view if needed */
+    /* Example: Hide "Home" link */
+    header nav ul li.home-link {
+        display: none;
+    }
+
+    /* Style specific links with icons */
+    header nav ul li.template-link a::before {
+        content: "\f1c1"; /* Font Awesome paper icon */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-right: 8px;
+    }
+
+    /* Ensure the link text is visible */
+    header nav ul li.template-link a {
+        font-size: 1.2em;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: #ffffff;
+    padding: 120px 0 20px 0; /* Adjust padding to account for fixed header */
+    margin-top: 80px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 2em;
+    color: #ff7f50;
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.hero-text p {
+    font-size: 1em;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.hero-buttons .btn {
+    flex: 1 1 30%;
+    text-align: center;
+    min-width: 120px;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-buttons .btn.primary-btn {
+    background: #ff7f50;
+    color: #fff;
+    border: none;
+}
+
+.hero-buttons .btn.primary-btn:hover {
+    background: #e76f3b;
+    transform: translateY(-3px);
+}
+
+.hero-buttons .btn.secondary-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+}
+
+.hero-buttons .btn.secondary-btn:hover {
+    background: #555;
+    transform: translateY(-3px);
+}
+
+.hero-buttons .btn.code-btn {
+    background: #6e5494;
+    color: #fff;
+    border: none;
+}
+
+.hero-buttons .btn.code-btn:hover {
+    background: #59417d;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-buttons .btn {
+        flex: 1 1 45%;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons .btn {
+        flex: 1 1 100%;
+        max-width: 300px;
+    }
+
+    .hero-buttons .btn.code-btn {
+        margin-bottom: 10px; /* Add bottom margin to specific buttons if needed */
+    }
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 5px;
+}
+
+/* Summary Section */
+.summary {
+    background: #fff;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.summary h2 {
+    margin-bottom: 15px;
+    color: #ff7f50;
+    font-size: 1.8em;
+    text-align: left;
+}
+
+.summary p {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    color: #555;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Space below paragraphs */
+}
+
+/* Visualizations Section */
+.visualizations {
+    background: #fff;
+    padding: 30px 0;
+}
+
+.visualizations h2 {
+    display: none;
+}
+
+.visualization-item {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.visualization-item img {
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.description {
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.description h3 {
+    color: #ff7f50;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+
+.description p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.description ul {
+    list-style: disc inside;
+    margin-top: 10px;
+}
+
+.description ul li {
+    margin-bottom: 5px;
+}
+
+/* Contact Information */
+.contact-info {
+    background: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-info p {
+    color: #555;
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+footer a {
+    color: #ff7f50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Paper Content */
+.paper-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+.paper-content h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    color: #ff7f50;
+}
+
+.paper-content h3 {
+    font-size: 1.6em;
+    margin-top: 15px;
+    color: #555;
+}
+
+.paper-content h4 {
+    font-size: 1.6em;
+    margin-top: 20px;
+    color: #555;
+}
+
+.paper-content p {
+    font-size: 1em;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.paper-content ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.paper-content ol li {
+    margin-bottom: 10px;
+}
+
+/* Hide Social Links in Footer on Index Page */
+footer .social-links {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    .summary p {
+        font-size: 1em;
+    }
+
+    .paper-content {
+        padding: 0 20px;
+    }
+
+    .description p {
+        font-size: 1em;
+    }
+
+    .summary {
+        padding: 25px 0;
+    }
+
+    .visualizations {
+        padding: 25px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .toggle-button {
+        display: block;
+    }
+
+    .paper-content {
+        padding: 0 10px;
+    }
+
+    .description {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text h2 {
+        font-size: 1.6em;
+    }
+
+    .description h3 {
+        font-size: 1.6em;
+    }
+
+    .description p {
+        font-size: 1em;
+    }
+
+    .paper-content h2 {
+        font-size: 1.6em;
+    }
+
+    .paper-content h3 {
+        font-size: 1.6em;
+    }
+
+    .paper-content h4 {
+        font-size: 1.6em;
+    }
+}
+
+/* Additional Styles */
+
+/* Ensure logos are responsive and fit well within the header */
+.logo-container .logo {
+    max-height: 60px;
+    width: auto;
+    height: auto;
+}
+
+.logo-container .mila-logo {
+    max-height: 60px;
+    width: auto;
+    height: auto;
+}
+
+/* Adjust navigation link font sizes for better visibility */
+header nav ul li a {
+    font-size: 1.2em;
+}
+
+
+/* Affiliations Section Styling */
+.affiliations {
+    margin-bottom: 40px; /* Adds space below the affiliations */
+}
+
+.affiliations p {
+    font-size: 1em; /* Ensures consistent font size */
+    color: #555; /* Maintains text color consistency */
+}
+
+/* Abstract Section Styling */
+.abstract-section {
+    margin-bottom: 40px; /* Adds space below the abstract */
+}
+
+.abstract-section p {
+    font-size: 1em; /* Ensures consistent font size */
+    color: #555; /* Maintains text color consistency */
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Format figures in paper-content */
+.paper-content figure {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.paper-content figure img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.paper-content figure figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Specific styling for WordCloud and Criteria figures */
+.paper-content figure img[src*="wordcloud"],
+.paper-content figure img[src*="criteria"] {
+    max-width: 800px;
+}

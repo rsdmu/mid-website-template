@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><!-- Template Title --></title>
+    <meta name="description" content="<!-- Template Description -->">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="<!-- Template Title -->">
+    <meta property="og:description" content="<!-- Template Description -->">
+    <meta property="og:image" content="https://yourdomain.com/assets/images/your-image.jpg">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "<!-- Template Name -->",
+      "url": "https://yourdomain.com/",
+      "description": "<!-- Template Description -->",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://yourdomain.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dyvAozBTULJ9pHSAT2mCBRgdoLr6P6NsFo58IaNqq0kaN3ZkJdt4LpiRvdbusC3rE9F2eztjr5RJUJHgjF1ChA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="https://your-affiliation1.com/" target="_blank">
+                    <img src="assets/images/your-logo1.png" alt="Logo 1" class="logo logo1">
+                </a>
+                <a href="https://your-affiliation2.com/" target="_blank">
+                    <img src="assets/images/your-logo2.png" alt="Logo 2" class="logo logo2">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="home-link"><a href="index.html">Home</a></li>
+                    <li class="template-link"><a href="template.html" class="active">Template</a></li>
+                </ul>
+                <button class="toggle-button" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="main-content" data-aos="fade-up">
+        <div class="container">
+            <!-- Add your main content here -->
+            <h1><!-- Page Title --></h1>
+            <p><!-- Page content goes here --></p>
+            <!-- More sections as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info" data-aos="fade-up">
+        <div class="container">
+            <p>
+                <strong>For more information, contact:</strong>
+                <a href="mailto:your-email@example.com">your-email@example.com</a> |
+                <a href="https://www.yourwebsite.com" target="_blank" rel="noopener noreferrer">www.yourwebsite.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <!-- Current Year --> <!-- Template Name --> - <!-- Your Affiliations -->. All rights reserved.</p>
+            <p><a href="LICENSE">Template License (MIT)</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Navigation Toggle -->
+    <script src="assets/js/scripts.js"></script>
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800, /* Adjust duration as needed */
+            once: true,
+        });
+    </script>
+</body>
+</html>

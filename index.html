@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><!-- Project Title Here --></title>
+    <meta name="description" content="<!-- Brief description of the project -->">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="<!-- Project Title Here -->">
+    <meta property="og:description" content="<!-- Brief description of the project -->">
+    <meta property="og:image" content="https://yourdomain.com/assets/images/your-image.jpg">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "<!-- Project Name -->",
+      "url": "https://yourdomain.com/",
+      "description": "<!-- Brief description of the project -->",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://yourdomain.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dyvAozBTULJ9pHSAT2mCBRgdoLr6P6NsFo58IaNqq0kaN3ZkJdt4LpiRvdbusC3rE9F2eztjr5RJUJHgjF1ChA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <a href="https://your-affiliation1.com/" target="_blank">
+                    <img src="assets/images/your-logo1.png" alt="Logo 1" class="logo logo1">
+                </a>
+                <a href="https://your-affiliation2.com/" target="_blank">
+                    <img src="assets/images/your-logo2.png" alt="Logo 2" class="logo logo2">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="home-link"><a href="index.html" class="active">Home</a></li>
+                    <li class="template-link"><a href="template.html">Template</a></li>
+                </ul>
+                <button class="toggle-button" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" data-aos="fade-up">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1><!-- Project Name --></h1>
+                <h2><!-- Project Tagline --></h2>
+                <p><!-- Brief introductory text about the project. --></p>
+                <div class="hero-buttons">
+                    <a href="https://your-dataset-link.com" class="btn primary-btn">Dataset</a>
+                    <a href="https://your-paper-link.com" class="btn secondary-btn">Paper</a>
+                    <a href="https://github.com/yourusername/your-repo" target="_blank" class="btn code-btn">
+                        <i class="fab fa-github"></i> Code
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/placeholder-image.jpg" alt="Project Visualization" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="summary" data-aos="fade-up">
+        <div class="container">
+            <h2>Summary</h2>
+            <p><!-- Summary paragraph 1 --></p>
+            <p><!-- Summary paragraph 2 --></p>
+            <p><!-- Summary paragraph 3 --></p>
+        </div>
+    </section>
+
+    <!-- Visualizations Section -->
+    <section class="visualizations" data-aos="fade-up">
+        <div class="container">
+            <!-- Removed <h2>Visualizations</h2> -->
+
+            <!-- Visualization 1 -->
+            <div class="visualization-item">
+                <img src="assets/images/placeholder-visualization1.jpg" alt="Visualization 1" loading="lazy">
+                <div class="description">
+                    <h3><!-- Visualization 1 Title --></h3>
+                    <p><!-- Description for Visualization 1 --></p>
+                </div>
+            </div>
+
+            <!-- Visualization 2 -->
+            <div class="visualization-item">
+                <img src="assets/images/placeholder-visualization2.jpg" alt="Visualization 2" loading="lazy">
+                <div class="description">
+                    <h3><!-- Visualization 2 Title --></h3>
+                    <p><!-- Description for Visualization 2 --></p>
+                </div>
+            </div>
+
+            <!-- Add more visualization items as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info" data-aos="fade-up">
+        <div class="container">
+            <p>
+                <strong>For more information, contact:</strong>
+                <a href="mailto:your-email@example.com">your-email@example.com</a> |
+                <a href="https://www.yourwebsite.com" target="_blank" rel="noopener noreferrer">www.yourwebsite.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <!-- Current Year --> <!-- Project Name --> - <!-- Your Affiliations -->. All rights reserved.</p>
+            <p><a href="LICENSE">Template License (MIT)</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Navigation Toggle -->
+    <script src="assets/js/scripts.js"></script>
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800, /* Adjust duration as needed */
+            once: true,
+        });
+    </script>
+</body>
+</html>
