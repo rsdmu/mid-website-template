@@ -72,9 +72,10 @@ To add a new page:
 
 This project is licensed under the [MIT License](LICENSE).
 
+
 ## Contact
 
-For more information, please contact [Rashid Mushkani](mailto:rashidmushkani@gmail.com).
+For more information, please contact [rashidmushkani@gmail.com](mailto:rashidmushkani@gmail.com) | [www.rsdmu.com](https://www.rsdmu.com)
 
 ## Acknowledgements
 
