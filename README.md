@@ -41,6 +41,14 @@ To use this template locally:
 2. **Replace Images:**
    - Add your own images to the `assets/images/` directory.
    - Update the `src` attributes in HTML to point to your images.
+   - **Update the Favicon:**
+     - Replace the existing favicon with your own by uploading your favicon file to the `assets/images/` directory.
+     - Update the `<link>` tag in the `<head>` section of your HTML files to point to your favicon.
+       ```html
+       <!-- Favicon -->
+       <link rel="icon" href="assets/images/your-favicon.ico" type="image/x-icon">
+       ```
+     - Ensure your favicon file is named appropriately (e.g., `favicon.ico`) or update the `href` path accordingly.
 
 3. **Modify Styles:**
    - Edit `assets/css/styles.css` to customize the appearance as per your preferences.
