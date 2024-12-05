@@ -21,7 +21,7 @@ To use this template locally:
 
 2. **Navigate to the Project Directory**
     ```bash
-    cd mid-space-website-template
+    cd mid-website-template
     ```
 
 3. **Open the Website**
