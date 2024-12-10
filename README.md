@@ -16,7 +16,7 @@ To use this template locally:
 
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/wedesignone/mid-website-template.git
+    git clone https://github.com/rsdmu/mid-website-template.git
     ```
 
 2. **Navigate to the Project Directory**
