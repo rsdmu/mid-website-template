@@ -1,6 +1,10 @@
 # Mid-space Website Template
 
+
+
 Welcome to the **Mid-space Website Template**! This project provides a responsive and customizable website structure suitable for research projects, portfolios, or any content-focused websites.
+
+<img width="1728" alt="Screenshot 2024-12-11 at 10 15 12 PM" src="https://github.com/user-attachments/assets/db1b445a-5ef2-4a03-9b29-0d2a49938937" />
 
 ## Features
 
