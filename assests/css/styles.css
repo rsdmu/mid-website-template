@@ -1,3 +1,7 @@
+/* assets/css/styles.css */
+
+
+
 /* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
@@ -16,7 +20,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
-    font-size: 1.2em; /* Base font size */
+    font-size: 1.2em; 
 }
 
 /* Container */
@@ -36,19 +40,19 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    padding: 10px 0; /* Increased padding for better spacing */
+    padding: 10px 0; 
 }
 
 header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px; /* Added padding for better spacing */
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    margin-bottom: 0;
 }
 
 .logo-container .logo {
@@ -59,7 +63,7 @@ header .container {
 }
 
 .logo-container .mila-logo {
-    max-height: 80px; /* Adjust as needed */
+    max-height: 80px; 
     width: auto;
     height: auto;
 }
@@ -69,6 +73,7 @@ header nav ul {
     list-style: none;
     display: flex;
     margin: 0;
+    padding: 0;
 }
 
 header nav ul li {
@@ -91,10 +96,20 @@ header nav ul li a.active {
 
 /* Toggle Button */
 .toggle-button {
-    display: none;
+    display: none; /* Hidden by default */
     font-size: 1.5em;
     cursor: pointer;
     color: #333;
+    background: none;
+    border: none;
+    padding: 10px; /* Added padding for larger clickable area */
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.toggle-button:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    color: #ff7f50; /* Change color on hover */
 }
 
 /* Responsive Navigation */
@@ -103,11 +118,14 @@ header nav ul li a.active {
         flex-direction: column;
         background: #fff;
         position: absolute;
-        top: 60px;
-        right: 0;
+        top: 70px; /* Adjusted to account for header height */
+        right: 20px; /* Align with container padding */
         width: 200px;
         display: none;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        border-radius: 5px; /* Rounded corners */
+        overflow: hidden; /* Prevent overflow */
+        transition: max-height 0.3s ease-in-out;
     }
 
     header nav ul.active {
@@ -119,34 +137,71 @@ header nav ul li a.active {
         text-align: center;
     }
 
+    /* Show toggle button on mobile */
     .toggle-button {
         display: block;
+        font-size: 2em; /* Increased size */
+        padding: 12px; /* Increased padding */
+        color: #333; /* Default color */
+        background-color: #ffffff; /* Background color */
+        border: 2px solid #ff7f50; /* Border color matching hover color */
     }
 
-    /* Hide specific links in mobile view if needed */
-    /* Example: Hide "Home" link */
-    header nav ul li.home-link {
-        display: none;
+    .toggle-button:hover {
+        background-color: #ff7f50; /* Change background on hover */
+        color: #ffffff; /* Change icon color on hover */
     }
 
-    /* Style specific links with icons */
-    header nav ul li.template-link a::before {
+    /* Style "Paper" link with icon */
+    header nav ul li.paper-link a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header nav ul li.paper-link a::before {
         content: "\f1c1"; /* Font Awesome paper icon */
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
         margin-right: 8px;
     }
 
-    /* Ensure the link text is visible */
-    header nav ul li.template-link a {
+    /* Adjust font size for better visibility */
+    header nav ul li.paper-link a {
         font-size: 1.2em;
     }
 }
 
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: nowrap; /* Prevent wrapping */
+    }
+
+    .logo-container {
+        flex: 1; /* Allow logos to take up available space */
+    }
+
+    header nav {
+        flex: 0; /* Navigation takes minimal space */
+    }
+
+    /* Ensure the toggle button is aligned properly */
+    .toggle-button {
+        margin-left: auto; /* Push the toggle button to the far right */
+    }
+
+    /* Improve the navigation menu's appearance */
+    header nav ul {
+        margin-top: 10px; /* Add some spacing from the toggle button */
+    }
+}
+
+
 /* Hero Section */
 .hero {
     background: #ffffff;
-    padding: 120px 0 20px 0; /* Adjust padding to account for fixed header */
+    padding: 120px 0 20px 0; 
     margin-top: 80px;
 }
 
@@ -249,7 +304,7 @@ header nav ul li a.active {
     }
 
     .hero-buttons .btn.code-btn {
-        margin-bottom: 10px; /* Add bottom margin to specific buttons if needed */
+        margin-bottom: 10px; /* Adds space between buttons */
     }
 }
 
@@ -263,8 +318,8 @@ header nav ul li a.active {
     width: 100%;
     max-width: 500px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 5px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
 }
 
 /* Summary Section */
@@ -275,7 +330,7 @@ header nav ul li a.active {
 }
 
 .summary h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #ff7f50;
     font-size: 1.8em;
     text-align: left;
@@ -288,7 +343,7 @@ header nav ul li a.active {
     color: #555;
     font-size: 1em;
     line-height: 1.6;
-    margin-bottom: 20px; /* Space below paragraphs */
+    margin-bottom: 20px;
 }
 
 /* Visualizations Section */
@@ -349,26 +404,26 @@ header nav ul li a.active {
 /* Contact Information */
 .contact-info {
     background: #fff;
-    padding: 40px 0;
+    padding: 40px 0; 
     text-align: center;
 }
 
 .contact-info p {
     color: #555;
-    font-size: 1.2em;
+    font-size: 1.2em; 
 }
 
 /* Footer */
 footer {
     background: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 20px 0; 
     text-align: center;
 }
 
 footer p {
     margin-top: 15px;
-    font-size: 1.2em;
+    font-size: 1.2em; 
 }
 
 footer a {
@@ -439,7 +494,6 @@ footer a:hover {
     margin-bottom: 10px;
 }
 
-/* Hide Social Links in Footer on Index Page */
 footer .social-links {
     display: none;
 }
@@ -539,7 +593,6 @@ footer .social-links {
     }
 }
 
-/* Additional Styles */
 
 /* Ensure logos are responsive and fit well within the header */
 .logo-container .logo {
@@ -603,8 +656,82 @@ header nav ul li a {
     margin-top: 5px;
 }
 
+
+
 /* Specific styling for WordCloud and Criteria figures */
 .paper-content figure img[src*="wordcloud"],
 .paper-content figure img[src*="criteria"] {
     max-width: 800px;
+}
+
+footer p a {
+    color: #ff7f50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer p a:hover {
+    color: #e76f3b;
+    text-decoration: underline;
+}
+
+pre {
+    white-space: pre-wrap;      
+    word-wrap: break-word;      
+    overflow-x: auto;           
+    background-color: #f8f8f8;   
+    padding: 5px;               
+    border-radius: 5px;          
+
+/* Optional: Add some styling for better readability */
+ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0; /* Remove default padding */
+}
+li {
+    margin-bottom: 10px; /* Space between references */
+    text-align: justify; /* Justify text for neatness */
+}
+.reference-number {
+    font-weight: bold; /* Bold the reference numbers */
+    margin-right: 5px; /* Space between number and text */
+}
+
+.suggested-citation {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px;
+    margin: 30px 0;
+    border-left: 4px solid #007BFF; /* Blue accent line */
+    border-radius: 4px;
+}
+
+.suggested-citation h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.citation-container {
+    position: relative;
+}
+
+.citation-container p {
+    font-style: italic; /* Italicize the citation */
+    color: #555;
+    padding-right: 30px; /* Space for the copy button */
+}
+
+.copy-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: #007BFF; /* Blue color for the icon */
+    font-size: 1.2em;
+}
+
+.copy-button:hover {
+    color: #0056b3; /* Darker blue on hover */
 }
